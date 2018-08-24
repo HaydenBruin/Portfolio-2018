@@ -1,3 +1,3 @@
-## CRA/Redux/SCSS boilerplate
+## 2018 Portfolio (React)
 
-A boilerplate that I use personally, simply just CRA ejected with redux & SCSS.
+My new portfolio for 2018 using my boilerplate (CRA/Redux/SCSS)
