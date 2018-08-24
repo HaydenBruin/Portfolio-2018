@@ -1,5 +1,6 @@
-$black: #303030;
+$black: #222222;
 $red: #EF4D4D;
+$white: #FFFFFF;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -41,4 +42,19 @@ button, .button {
     &:hover {
         background: #333;
     }
+}
+
+a {
+    color: $black;
+
+    &:hover, &:focus {
+        color: $red;
+    }
+}
+
+.dash {
+    width: 36px;
+    height: 4px;
+    background-color: $red;
+    margin-bottom: 15px;
 }
