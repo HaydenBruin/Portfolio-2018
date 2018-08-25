@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Project extends Component {
+class Project extends Component {
     render() {
         return (
             <Link to={'/projects/' + this.props.project.slug + '/'} className="projects__project">
@@ -15,8 +15,8 @@ export default class Project extends Component {
                     <div className="role">{this.props.project.role}</div>
                     <div className="tags">
                         {
-                            this.props.project.tags.map((tag) => {
-                                return <div className={"tag " + tag.toLowerCase()}>{tag}</div>
+                            this.props.project.tags.map((tag, index) => {
+                                return <div key={index} className={"tag " + tag.toLowerCase()}>{tag}</div>
                             })
                         }
                     </div>
@@ -25,3 +25,5 @@ export default class Project extends Component {
         )
     }
 }
+
+export default Project

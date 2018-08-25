@@ -3,17 +3,13 @@ import Project from './project';
 import { connect } from 'react-redux';
 
 class Projects extends Component {
-    state = {
-        projects: null
-    }
     render() {
-        console.log(this.props);
-        if(!this.state.projects) return null;
+        if(!this.props.projects) return null;
         return (
             <div className="projects">
                 {
-                    this.state.projects.map((project) => {
-                        return <Project project={project} />
+                    this.props.projects.map((project, index) => {
+                        return <Project key={index} project={project} />
                     })
                 }
             </div>
@@ -22,7 +18,7 @@ class Projects extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    test: state.penis
+    projects: state.projects
 })
 
 export default connect(mapStateToProps)(Projects)

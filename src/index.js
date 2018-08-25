@@ -17,24 +17,23 @@ import "./scss/_load.scss";
 import rootReducer from "./reducers";
 
 let defaultState = {
-    penis: true
+    projects: []
 }
 
-fetch("data/projects.json")
-.then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson);
-  });
+const loadDefaultState = async () => {
+    const response = await fetch('/data/projects.json');
+    const projects = await response.json();
+    defaultState.projects = projects;
 
-// RENDER
-ReactDOM.render(
-    <Provider store={createStore(rootReducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </Provider>,
-document.getElementById('root'));
+    // RENDER
+    ReactDOM.render(
+        <Provider store={createStore(rootReducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>,
+    document.getElementById('root'));
 
-registerServiceWorker();
+    registerServiceWorker();
+}
+loadDefaultState();

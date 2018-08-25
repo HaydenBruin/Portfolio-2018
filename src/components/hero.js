@@ -3,29 +3,6 @@ import React, { Component } from 'react'
 import Icon from "./utils/icons"
 
 export default class Hero extends Component {
-    
-    state = {
-        workwith: [
-            "HTML",
-            "CSS",
-            "Javascript",
-            "React",
-            "Redux",
-            "ES6",
-            "VueJS"
-        ],
-        workwithcounter: 0
-    }
-
-    componentDidMount(){
-        setInterval(() => {
-            const count = (
-                (this.state.workwithcounter + 1) >= this.state.workwith.length ?
-                0 : this.state.workwithcounter + 1
-            )
-            this.setState({ workwithcounter: count })
-        }, 2000);
-    }
 
     scrollDown = () => {
         console.log('scroll down');
@@ -36,7 +13,7 @@ export default class Hero extends Component {
             <div className="hero">
                 <div className="hero__content">
                     <h1>Hi, I'm Hayden Bruin</h1>
-                    <h2>I <Icon name="heart" height="24" width="24" /> <span>{this.state.workwith[this.state.workwithcounter]}</span></h2>
+                    <h2>I <Icon name="heart" height="24" width="24" /> <span>React</span></h2>
                 </div>
                 <div className="hero__footer">
                     <div onClick={() => this.scrollDown()}>
