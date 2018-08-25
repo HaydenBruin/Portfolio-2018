@@ -16,9 +16,21 @@ import "./scss/_load.scss";
 // ROOT REDUCER
 import rootReducer from "./reducers";
 
+let defaultState = {
+    penis: true
+}
+
+fetch("data/projects.json")
+.then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+
 // RENDER
 ReactDOM.render(
-    <Provider store={createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
+    <Provider store={createStore(rootReducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
