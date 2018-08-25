@@ -29,6 +29,10 @@ p {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 button, .button {
     background: $black;
     border: 0px;

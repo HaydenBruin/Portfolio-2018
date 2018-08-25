@@ -10,7 +10,8 @@ export default class Footer extends Component {
                     <p>Send me a message <a href="mailto:bruinhayden@gmail.com">bruinhayden@gmail.com</a></p>
                 </div>
                 <div className="footer__copyright">
-                    <p>Copyright &copy; Hayden Bruin (Front-end Developer)</p>
+                    <p>Copyright &copy; Hayden Bruin</p>
+                    <p>Front-end Developer @ Cucumber</p>
                 </div>
             </footer>
         )

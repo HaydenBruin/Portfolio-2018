@@ -49,10 +49,10 @@
 
         svg {
             background: #FFF;
-            transition: ease all 0.5s;
             padding: 5px;
             border-radius: 15px;
             cursor: pointer;
+            position: relative;
 
             &:hover {
                 fill: $red;
