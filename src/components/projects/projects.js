@@ -7,19 +7,21 @@ export default class Projects extends Component {
         projects: [
             {
                 title: "Contact Energy",
+                slug: "contact-energy",
                 role: "Front-end Developer",
                 media: "/media/contact.jpg",
                 date: "23rd Aug 2018",
                 tags: [
                     "SCSS",
                     "Gulp",
+                    "Git",
                     "HTML",
                     "jQuery",
-                    "Git"
                 ]
             },
             {
                 title: "Future Blossom",
+                slug: "future-blossom",
                 role: "Full stack PHP Developer",
                 media: "/media/futureblossom.jpg",
                 date: "12nd Aug 2015",
@@ -27,13 +29,14 @@ export default class Projects extends Component {
                     "jQuery",
                     "PHP",
                     "MySQL",
+                    "Git",
                     "PayPal",
                     "CSS",
-                    "Git",
                 ]
             },
             {
                 title: "Hair & Beauty IOM",
+                slug: "hair-and-beauty-iom",
                 role: "Full stack PHP Developer",
                 media: "/media/hairandbeauty.jpg",
                 date: "12nd Aug 2015",
@@ -42,10 +45,10 @@ export default class Projects extends Component {
                     "PHP",
                     "VendHQ",
                     "API",
+                    "Git",
                     "PayPal",
                     "MySQL",
                     "CSS",
-                    "Git"
                 ]
             }
         ]

@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Project extends Component {
     render() {
         return (
-            <div className="projects__project">
+            <Link to={'/projects/' + this.props.project.slug + '/'} className="projects__project">
                 <div className="projects__project--imgwrapper">
                     <img src={this.props.project.media} alt={this.props.project.title} />
                 </div>
@@ -20,7 +21,7 @@ export default class Project extends Component {
                         }
                     </div>
                 </div>
-            </div>
+            </Link>
         )
     }
 }
