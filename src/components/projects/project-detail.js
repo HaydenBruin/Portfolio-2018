@@ -11,24 +11,30 @@ class ProjectDetail extends Component {
     render() {
         return (
             <Fragment>
-                <Link to="/" className="projects__project">Back</Link>
-                <div className="projects__project">
-                    <div className="projects__project--imgwrapper">
-                        <img src={this.project.media} alt={this.project.title} />
-                    </div>
-                    <div className="projects__project--content">
-                        <div className="date">{this.project.date}</div>
-                        <div className="dash"></div>
-                        <div className="title">{this.project.title}</div>
-                        <div className="role">{this.project.role}</div>
-                        <div className="tags">
-                            {
-                                this.project.tags.map((tag, index) => {
-                                    return <div key={index} className={"tag " + tag.toLowerCase()}>{tag}</div>
-                                })
-                            }
+                {/* <Link to="/" className="projects__project">Back</Link> */}
+                <div class="project">
+                    <div class="project__project">
+                        <div className="project__project--imgwrapper">
+                            <img className="real" src={this.project.medialarge} alt={this.project.title} />
+                            <img className="blur" src={this.project.medialarge} alt={this.project.title} />
+                        </div>
+                        <div className="project__project--content container">
+                            <div className="date">{this.project.date}</div>
+                            <div className="dash"></div>
+                            <div className="title">{this.project.title}</div>
+                            <div className="role">{this.project.role}</div>
+                            <div className="tags">
+                                {
+                                    this.project.tags.map((tag, index) => {
+                                        return <div key={index} className={"tag " + tag.toLowerCase()}>{tag}</div>
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="description">
+                    <div class="container" dangerouslySetInnerHTML={{__html: this.project.description}}></div>
                 </div>
             </Fragment>
         )

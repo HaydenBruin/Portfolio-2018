@@ -10,6 +10,11 @@ body {
     margin: 0px;
 }
 
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
 h1 {
     font-weight: bold;
     font-size: 42px;
@@ -31,6 +36,54 @@ p {
 
 img {
     max-width: 100%;
+}
+
+.tags {
+    .tag {
+        border-radius: 30px;
+        padding: 5px 15px;
+        font-size: 12px;
+        background: #333;
+        color: $white;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &.jquery {
+            background: #0769ad;
+        }
+        &.scss {
+            background: #c6538c;
+        }
+        &.git {
+            background: #F05133;
+        }
+        &.gulp {
+            background: #cf4647;
+        }
+        &.html {
+            background: #F16529;
+        }
+        &.php {
+            background: #8892BF;
+        }
+        &.mysql {
+            background: #47809D;
+        }
+        &.paypal {
+            background: #253B80;
+        }
+        &.api {
+            background: #F5DE19;
+            color: #333;
+        }
+        &.vendhq {
+            background: #41AF4B;
+        }
+        &.css {
+            background: #2965F1;
+        }
+    }
 }
 
 button, .button {
