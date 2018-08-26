@@ -8,11 +8,19 @@ body {
     background: #FFF;
     padding: 0px;
     margin: 0px;
+    font-size: 16px;
 }
 
 .container {
     max-width: 900px;
     margin: 0px auto;
+}
+
+a {
+    background: transparent;
+    color: $black;
+    text-decoration: underline;
+
 }
 
 h1 {

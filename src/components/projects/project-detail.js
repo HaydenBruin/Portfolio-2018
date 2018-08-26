@@ -11,7 +11,6 @@ class ProjectDetail extends Component {
     render() {
         return (
             <Fragment>
-                {/* <Link to="/" className="projects__project">Back</Link> */}
                 <div class="project">
                     <div class="project__project">
                         <div className="project__project--imgwrapper">
@@ -19,22 +18,32 @@ class ProjectDetail extends Component {
                             <img className="blur" src={this.project.medialarge} alt={this.project.title} />
                         </div>
                         <div className="project__project--content container">
-                            <div className="date">{this.project.date}</div>
-                            <div className="dash"></div>
-                            <div className="title">{this.project.title}</div>
-                            <div className="role">{this.project.role}</div>
-                            <div className="tags">
-                                {
-                                    this.project.tags.map((tag, index) => {
-                                        return <div key={index} className={"tag " + tag.toLowerCase()}>{tag}</div>
-                                    })
-                                }
+                            <div className="detail">
+                                <div className="date">{this.project.date}</div>
+                                <div className="dash"></div>
+                                <div className="title">{this.project.title}</div>
+                                <div className="role">{this.project.role}</div>
+                                <div className="tags">
+                                    {
+                                        this.project.tags.map((tag, index) => {
+                                            return <div key={index} className={"tag " + tag.toLowerCase()}>{tag}</div>
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div class="detail company">
+                                <img src={this.project.companylogo} alt={this.project.company} />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="description">
-                    <div class="container" dangerouslySetInnerHTML={{__html: this.project.description}}></div>
+                    <div className="project__description">
+                        <div className="container">
+                            <div className="project__description--content"  dangerouslySetInnerHTML={{__html: this.project.description}}></div>
+                            <div className="project__description--back">
+                                <Link to="/projects/">Interested in more? Take a look at my other work</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Fragment>
         )
