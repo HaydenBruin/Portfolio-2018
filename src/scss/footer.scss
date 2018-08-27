@@ -22,13 +22,17 @@
     &__copyright {
         background: $black;
         color: $white;
-        padding: 30px 30px;
+        padding: 30px 100px;
+        display: flex;
 
         p {
+            flex: 1 0 50%;
             margin: 0px;
             padding: 0px;
             color: $white;
             text-align: center;
         }
+        p:first-child { text-align: left; }
+        p:last-child { text-align: right; }
     }
 }

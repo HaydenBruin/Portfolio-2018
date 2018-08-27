@@ -1,13 +1,16 @@
 header {
-    background: #FFF;
     height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    padding: 0px 100px;
 
     nav {
+        background: #FFF;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 0px 100px;
+        z-index: 99;
+
         ul {
             font-size: 0px;
             padding: 0px;
