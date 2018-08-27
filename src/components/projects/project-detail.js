@@ -11,8 +11,8 @@ class ProjectDetail extends Component {
     render() {
         return (
             <Fragment>
-                <div class="project">
-                    <div class="project__project">
+                <div className="project">
+                    <div className="project__project">
                         <div className="project__project--imgwrapper">
                             <img className="real" src={this.project.medialarge} alt={this.project.title} />
                             <img className="blur" src={this.project.medialarge} alt={this.project.title} />
@@ -31,14 +31,14 @@ class ProjectDetail extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="detail company">
+                            <div className="detail company">
                                 <img src={this.project.companylogo} alt={this.project.company} />
                             </div>
                         </div>
                     </div>
                     <div className="project__description">
                         <div className="container">
-                            <div className="project__description--content"  dangerouslySetInnerHTML={{__html: this.project.description}}></div>
+                            <div className="project__description--content"  dangerouslySetInnerHTML={{__html: this.project.description.join("")}}></div>
                             <div className="project__description--back">
                                 <Link to="/projects/">Interested in more? Take a look at my other work</Link>
                             </div>
