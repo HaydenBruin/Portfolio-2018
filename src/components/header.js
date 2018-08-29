@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
     render() {
@@ -6,8 +7,16 @@ export default class Header extends Component {
             <header>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/projects/">Projects</a></li>
+                        {
+                            ([
+                                { url: '/', title: 'Home' },
+                                { url: '/projects/', title: 'Projects' }
+                            ]).map((link, index) => {
+                                return (
+                                    <li key={index}><Link to={link.url}>{link.title}</Link></li>
+                                )
+                            })
+                        }
                     </ul>
                 </nav>
             </header>
