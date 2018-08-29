@@ -28,7 +28,7 @@ const loadDefaultState = async () => {
     // RENDER
     ReactDOM.render(
         <Provider store={createStore(rootReducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
-            <BrowserRouter>
+            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
                 <App />
             </BrowserRouter>
         </Provider>,

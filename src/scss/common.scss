@@ -1,6 +1,13 @@
+// COLOURS
 $black: #222222;
 $red: #EF4D4D;
 $white: #FFFFFF;
+
+// MEDIA QUERIES
+$tablet: 1023px;
+$tabletmax: 1024px;
+$mobile: 767px;
+$mobilemax: 768px;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -122,4 +129,9 @@ a {
     height: 4px;
     background-color: $red;
     margin-bottom: 15px;
+
+    @media all and (max-width: $mobile) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

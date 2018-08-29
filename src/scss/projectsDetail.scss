@@ -1,7 +1,6 @@
 .project {
 
     &__project {
-        flex: 1 0 25%;
         box-sizing: border-box;
         background: #eee;
         text-decoration: none;
@@ -11,6 +10,11 @@
             position: relative;
             overflow: hidden;
             text-align: center;
+
+            @media all and (max-width: $mobile)
+            {
+                height: 200px;
+            }
 
             img.blur {
                 position: absolute;
@@ -42,11 +46,33 @@
             justify-content: center;
             align-items: center;
 
+            @media all and (max-width: $mobile)
+            {
+                display: block;
+                text-align: center;
+            }
+
             .detail {
                 flex: 1 0 50%;
 
                 &.company {
                     text-align: right;
+
+                    @media all and (max-width: $mobile)
+                    {
+                        text-align: center;
+                    }
+
+                    .dash {
+                        display: none;
+
+                        @media all and (max-width: $mobile)
+                        {
+                            display: block;
+                            margin-top: 20px;
+                            margin-bottom: 25px;
+                        }
+                    }
                 }
 
                 img {

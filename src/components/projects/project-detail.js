@@ -32,6 +32,7 @@ class ProjectDetail extends Component {
                                 </div>
                             </div>
                             <div className="detail company">
+                                <div className="dash"></div>
                                 <img src={this.project.companylogo} alt={this.project.company} />
                             </div>
                         </div>
