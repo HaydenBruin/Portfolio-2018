@@ -1,11 +1,12 @@
-HTML
-CSS
+
+## HTML
+## CSS
 - SCSS
 - Gulp/Webpack minification
 - Bootstrap
 - Foundation
 - Flexbox
-Javascript
+## Javascript
 - ES5/ES6
 - React
 - Create-React-App
@@ -15,19 +16,19 @@ Javascript
 - jQuery
 - Gulp
 - Webpack
-Version Control
+## Version Control
 - Git
 - BitBucket
 - GitHub
-PHP
+## PHP
 - Vanilla PHP5 & PHP7
 - Laravel
 - Laravel API
 - CMS Builder (In House)
-Virtual Machine
+## Virtual Machine
 - Vagrant
 - Laravel Homestead
-Server Management
+## Server Management
 - Linux/Ubuntu VPS
 - Digital Ocean/OVH
 - VirtualMin
@@ -35,7 +36,7 @@ Server Management
 - LetsEncrypt (SSL) 
 - RunCloud (Server Management / Continuous Deployment)
 - Netlify (Static site hosting)
-Database
+## Database
 - MySQL
 - PHPMyAdmin
 - HeidiSQL
